@@ -13,3 +13,16 @@ body {
 .navbar a {
     margin-left: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* stack the navbar items vertically */
+        align-items: center;    /* center the items */
+    }
+
+    .navbar li {
+        margin-bottom: 10px;   /* add some spacing between items */
+    }
+    
+    /* Any other styling adjustments for mobile view can be added here */
+}

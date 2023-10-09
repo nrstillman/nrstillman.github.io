@@ -13,7 +13,7 @@
     <div id="bibliography"></div>
 </div>
 
-<!-- <script>
+<script>
 fetch('publications.bib')
   .then(response => {
     if (!response.ok) {
@@ -25,7 +25,6 @@ fetch('publications.bib')
     console.log("Raw BibTeX content:", bibtex);
     var parsed = bibtexParse.toJSON(bibtex);
     console.log("Parsed content:", parsed);
-
 
     var output = "";
     parsed.forEach(entry => {
@@ -44,51 +43,9 @@ fetch('publications.bib')
       output += "<li><a href='" + url + "'>" + apaCitation + "</a></li>";
     });
 
-
     document.getElementById("bibliography").innerHTML = "<ul>" + output + "</ul>";
   })
   .catch(error => console.error("An error occurred:", error));
-</script>
- -->
-<script>
-  function formatBibtex(json) {
-    var out = '';
-    for (var i in json) {
-      out += "@" + json[i].entryType + "{";
-      if (json[i].citationKey)
-        out += json[i].citationKey + ",\n";
-      if (json[i].entryTags) {
-        var tags = '';
-        for (var jdx in json[i].entryTags) {
-          tags += "  " + jdx + " = {" + json[i].entryTags[jdx] + "},\n";
-        }
-        out += tags;
-      }
-      out += "}\n\n";
-    }
-    return out;
-  }
-fetch('publications.bib')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Error fetching .bib file");
-    }
-    return response.text();
-  })
-  .then(bibtex => {
-    console.log("Raw BibTeX content:", bibtex);
-    var parsed = bibtexParse.toJSON(bibtex);
-    console.log("Parsed content:", parsed);
-
-
-    var output = "";
-    parsed.forEach(entry => {
-
-    var bibtexJson = bibtexParse.toJSON(inputBibtex); // assuming inputBibtex contains your BibTeX data
-    var formattedBibtex = formatBibtex(bibtexJson);
-
-  // Now you can insert the formattedBibtex string into your HTML, e.g.:
-  document.getElementById('bibtexContainer').textContent = formattedBibtex;
 </script>
 
 </body>
