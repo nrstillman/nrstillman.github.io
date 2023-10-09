@@ -3,49 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Publications</title>
+    <title>Publications</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/bibtexParse.js"></script>
 </head>
 
 <body>
-<div class="container main">
-    <h2>Recent Publications</h2>
-    <div id="bibliography"></div>
-</div>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="articles/">Articles</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+    </div>
+    <div class="container main">
+        <h2>Upcoming Publications</h2>
+        <div id="upcoming bibliography"></div>
+        <h2>Publications</h2>
+        <div id="bibliography"></div>
+    </div>
 
 <script>
-fetch('publications.bib')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Error fetching .bib file");
-    }
-    return response.text();
-  })
-  .then(bibtex => {
-    console.log("Raw BibTeX content:", bibtex);
+function processBibtex(bibtex, targetElementId) {
     var parsed = bibtexParse.toJSON(bibtex);
     console.log("Parsed content:", parsed);
 
+    parsed.sort((a, b) => b.entryTags.year - a.entryTags.year);
+
+    const groupedByYear = parsed.reduce((acc, entry) => {
+        const year = entry.entryTags.year || 'Unknown';
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(entry);
+        return acc;
+    }, {});
+
     var output = "";
-    parsed.forEach(entry => {
-      var title = entry.entryTags.title;
-      var author = entry.entryTags.author;
-      var journal = entry.entryTags.journal;
-      var year = entry.entryTags.year;
-      var volume = entry.entryTags.volume || "";
-      var number = entry.entryTags.number || "";
-      var pages = entry.entryTags.pages || "";
-      var doi = entry.entryTags.doi || "";
-      var url = entry.entryTags.url || "";
-
-      var apaCitation = author + ". (" + year + "). " + title + ". " + journal + ", " + volume + "(" + number + "), " + pages + ". " + (doi ? "DOI: " + doi : "") + "<br>";
-
-      output += "<li><a href='" + url + "'>" + apaCitation + "</a></li>";
+    Object.keys(groupedByYear).sort((a, b) => b - a).forEach(year => {
+        output += `<h3>${year}</h3><ul>`;
+        groupedByYear[year].forEach(entry => {
+            var title = entry.entryTags.title || "Untitled";
+            var author = entry.entryTags.author || "Unknown Author";
+            var journal = entry.entryTags.journal || "";
+            var volume = entry.entryTags.volume || "";
+            var number = entry.entryTags.number || "";
+            var pages = entry.entryTags.pages || "";
+            var doi = entry.entryTags.doi || "";
+            var url = entry.entryTags.url || "#";
+            var apaCitation = `<strong>${title}</strong><br>` +
+                              `${author}<br>` +
+                              `${journal}${journal ? ", " : ""}` +"<br>";
+            output += "<li><a href='" + url + "'>" + apaCitation + "</a></li>";
+        });
+        output += "</ul>";
     });
 
-    document.getElementById("bibliography").innerHTML = "<ul>" + output + "</ul>";
-  })
-  .catch(error => console.error("An error occurred:", error));
+    document.getElementById(targetElementId).innerHTML = output;
+}
+
+// Fetch and process main publications
+fetch('publications.bib')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Error fetching .bib file");
+        }
+        return response.text();
+    })
+    .then(bibtex => processBibtex(bibtex, "bibliography"))
+    .catch(error => console.error("An error occurred:", error));
+
+// Fetch and process upcoming publications
+fetch('upcoming_publications.bib')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Error fetching upcoming .bib file");
+        }
+        return response.text();
+    })
+    .then(bibtex => processBibtex(bibtex, "upcomingBibliography"))
+    .catch(error => console.error("An error occurred:", error));
 </script>
 
 </body>
