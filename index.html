@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- <head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+ -->
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="articles/">Articles</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+    </div>
+
+    <h2>Namid R. Stillman</h2>
+    <div class="header">
+    <p>Researcher in scientific methods</p>
+    </div>
+    <div class="container">
+        <div class="main">
+            <h2>General</h2>
+            <p>I am interested in developing interpretable AI methods for scientific research. These methods include approximate inference, geometric learning, deep generative models, and symbolic regression. I am particularly interested in applying these methods to complex and collective systems to derive new rules for living and non-equilibrium systems and integrating these rules into active learning and experiment design.</p>
+        </div>
+        <div class="contact">
+            <h2>Contact</h2>
+            <a href="https://www.twitter.com/nrstillman">Twitter</a>, <a href="https://www.linkedin.com/in/namidstillman/">Linkedin</a>, <a href="mailto:nstillman@turing.ac.uk">Email</a>
+        </div>
+        <div class="update">
+             <p>Last updated on <span id="lastUpdated"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    fetch('https://api.github.com/repos/nrstillman/nrstillman.github.io/commits/master') 
+        .then(response => response.json())
+        .then(data => {
+            const lastUpdateDate = new Date(data.commit.committer.date).toLocaleDateString();
+            document.getElementById('lastUpdated').innerText = lastUpdateDate;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
