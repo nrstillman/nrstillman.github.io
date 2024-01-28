@@ -11,4 +11,4 @@ I am interested in developing interpretable AI methods for scientific research. 
 
 ## Contact
 
-(Twitter/X)["https://www.twitter.com/nrstillman"], (LinkedIn)["https://www.linkedin.com/in/namidstillman/"]
+[Twitter](https://www.twitter.com/nrstillman), [LinkedIn](https://www.linkedin.com/in/namidstillman/)

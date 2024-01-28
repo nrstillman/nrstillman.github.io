@@ -22,12 +22,13 @@ function processBibtex(bibtex, targetElementId) {
             var number = entry.entryTags.number || "";
             var pages = entry.entryTags.pages || "";
             var doi = entry.entryTags.doi || "";
+            var year = entry.entryTags.year || "";
             var url = entry.entryTags.url || "#";
             var refTitle = `<strong>${title}</strong>`
             var refCitation = `${author}<br>` +
-                              `${journal}${journal ? ", " : ""}` +"<br>";
+                              `${journal}${journal ? ", " : ""}` + `${year}<br>`;
             output += "<li><a href='" + url + "'>" + refTitle + "</a>";
-            output += "<br><a>" + refCitation + "</a></li>";
+            output += "<br><a>" + refCitation + "</a></li><br>";
         });
         output += "</ul>";
     });

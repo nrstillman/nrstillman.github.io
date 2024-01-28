@@ -1,6 +1,7 @@
 ---
 title: "Black Boxes and Black Swans"
-description: "A brief description of what this writing is about."
+date_published: 28th of January, 2024
+description: "A brief discussion on the risk of deep generative models (Black Boxes) failing in the same way when responding to rare events (Black Swans)"
 layout: post
 ---
 
