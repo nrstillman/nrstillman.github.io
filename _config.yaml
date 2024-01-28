@@ -1,0 +1,34 @@
+title: Your Site's Title
+email: nrstillman@website.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Personal site
+baseurl: "" # the subpath of your site, e.g., /blog
+
+# Build settings
+markdown: kramdown
+theme: minima # or another theme
+plugins:
+  - jekyll-feed # example plugin
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item can be added to this list by adding the name of the file or directory.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+collections:
+  writings:
+    output: true
+    permalink: /writings/:path/
+  long:
+    output: true
+    permalink: /writings/long/:path/
+  short:
+    output: true
+    permalink: /writings/short/:path/

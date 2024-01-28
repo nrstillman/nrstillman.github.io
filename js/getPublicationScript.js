@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/bibtexParse.js"></script>
-</head>
-
-<body>
-    <div class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="articles/">Articles</a></li>
-            <li><a href="publications.html">Publications</a></li>
-        </ul>
-    </div>
-    <div class="container main">
-        <h2>Upcoming Publications</h2>
-        <div id="upcoming bibliography"></div>
-        <h2>Publications</h2>
-        <div id="bibliography"></div>
-    </div>
-
-<script>
 function processBibtex(bibtex, targetElementId) {
     var parsed = bibtexParse.toJSON(bibtex);
     console.log("Parsed content:", parsed);
@@ -63,7 +35,7 @@ function processBibtex(bibtex, targetElementId) {
 }
 
 // Fetch and process main publications
-fetch('publications.bib')
+fetch('bib/publications.bib')
     .then(response => {
         if (!response.ok) {
             throw new Error("Error fetching .bib file");
@@ -74,7 +46,7 @@ fetch('publications.bib')
     .catch(error => console.error("An error occurred:", error));
 
 // Fetch and process upcoming publications
-fetch('upcoming_publications.bib')
+fetch('bib/upcoming_publications.bib')
     .then(response => {
         if (!response.ok) {
             throw new Error("Error fetching upcoming .bib file");
@@ -83,7 +55,3 @@ fetch('upcoming_publications.bib')
     })
     .then(bibtex => processBibtex(bibtex, "upcomingBibliography"))
     .catch(error => console.error("An error occurred:", error));
-</script>
-
-</body>
-</html>

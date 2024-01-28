@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Namid R. Stillman - Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/bibtexParse.js"></script>
+
 </head>
 
 <body>
     <div class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="articles/">Articles</a></li>
-            <li><a href="publications.html">Publications</a></li>
+            <li><a href="{{ '/' | relative_url }}">Home</a></li>
+<!--             <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+            <li><a href="{{ '/research.html' | relative_url }}">Research</a></li> -->
+            <li><a href="{{ '/writings' | relative_url }}">Writing</a></li>
+            <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
         </ul>
+
     </div>
 
     <h2>Namid R. Stillman</h2>
@@ -25,12 +28,12 @@
     </div>
     <div class="container">
         <div class="main">
-            <h2>General</h2>
-            <p>I am interested in developing interpretable AI methods for scientific research. These methods include approximate inference, geometric learning, deep generative models, and symbolic regression. I am particularly interested in applying these methods to complex and collective systems to derive new rules for living and non-equilibrium systems and integrating these rules into active learning and experiment design.</p>
         </div>
+            {{ content }}
         <div class="contact">
             <h2>Contact</h2>
-            <a href="https://www.twitter.com/nrstillman">Twitter</a>, <a href="https://www.linkedin.com/in/namidstillman/">Linkedin</a>, <a href="mailto:nstillman@turing.ac.uk">Email</a>
+            <a href="https://www.twitter.com/nrstillman">Twitter</a>, 
+            <a href="https://www.linkedin.com/in/namidstillman/">Linkedin</a>
         </div>
         <div class="update">
              <p>Last updated on <span id="lastUpdated"></span></p>
