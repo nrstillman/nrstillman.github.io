@@ -16,7 +16,7 @@ Snapshots of a thought or the early shoots of an idea, recorded here for posteri
 {% endfor %}
 
 ### Shorter Writings
-A collection of shorter pieces that cover a single topic or an attempts to work through an early-stage idea. 
+A collection of shorter pieces that cover a single topic or an early-stage idea. 
 
 {% for item in site.writings %}
 {% if item.path contains 'short' %}
