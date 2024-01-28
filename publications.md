@@ -9,5 +9,4 @@ title: Publications
     <div id="bibliography"></div>
 </div>
 
-<!-- Link to specific JavaScript for publications -->
 <script src="{{ '/js/getPublicationScript.js' | relative_url }}"></script>

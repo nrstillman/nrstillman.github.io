@@ -4,37 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namid R. Stillman - Home</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/bibtexParse.js"></script>
-
 </head>
 
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a href="{{ '/' | relative_url }}">Home</a></li>
-<!--             <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-            <li><a href="{{ '/research.html' | relative_url }}">Research</a></li> -->
-            <li><a href="{{ '/writings' | relative_url }}">Writing</a></li>
-            <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
-        </ul>
-
+     <div class="sidebar">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/writings' | relative_url }}">Writings</a>
+        <a href="{{ '/publications' | relative_url }}">Publications</a>
+        <!-- Add other links as needed -->
     </div>
 
-    <h2>Namid R. Stillman</h2>
-    <div class="header">
-    <p>Researcher in scientific methods</p>
-    </div>
     <div class="container">
         <div class="main">
         </div>
             {{ content }}
-        <div class="contact">
-            <h2>Contact</h2>
-            <a href="https://www.twitter.com/nrstillman">Twitter</a>, 
-            <a href="https://www.linkedin.com/in/namidstillman/">Linkedin</a>
-        </div>
         <div class="update">
              <p>Last updated on <span id="lastUpdated"></span></p>
         </div>

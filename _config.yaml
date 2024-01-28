@@ -6,9 +6,10 @@ baseurl: "" # the subpath of your site, e.g., /blog
 
 # Build settings
 markdown: kramdown
-theme: minima # or another theme
-plugins:
-  - jekyll-feed # example plugin
+theme: jekyll-theme-cayman
+
+# plugins:
+  # - jekyll-feed # example plugin
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -21,14 +22,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
+  
 collections:
   writings:
     output: true
     permalink: /writings/:path/
-  long:
-    output: true
-    permalink: /writings/long/:path/
-  short:
-    output: true
-    permalink: /writings/short/:path/

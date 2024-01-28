@@ -23,10 +23,11 @@ function processBibtex(bibtex, targetElementId) {
             var pages = entry.entryTags.pages || "";
             var doi = entry.entryTags.doi || "";
             var url = entry.entryTags.url || "#";
-            var apaCitation = `<strong>${title}</strong><br>` +
-                              `${author}<br>` +
+            var refTitle = `<strong>${title}</strong>`
+            var refCitation = `${author}<br>` +
                               `${journal}${journal ? ", " : ""}` +"<br>";
-            output += "<li><a href='" + url + "'>" + apaCitation + "</a></li>";
+            output += "<li><a href='" + url + "'>" + refTitle + "</a>";
+            output += "<br><a>" + refCitation + "</a></li>";
         });
         output += "</ul>";
     });

@@ -1,0 +1,38 @@
+<!-- _layouts/writings.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+
+ <div class="sidebar">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/writings' | relative_url }}">Writings</a>
+    <a href="{{ '/publications' | relative_url }}">Publications</a>
+    <!-- Add other links as needed -->
+</div>
+<body>
+    {{ content }}
+</body>
+</html>
+
+
+
+<!-- 
+<h1>Debugging Collections</h1>
+
+<h2>Collections:</h2>
+<pre>
+{{ site.collections | inspect }}
+</pre>
+
+<h2>Long Writings:</h2>
+<pre>
+{{ site.long | inspect }}
+</pre>
+
+<h2>Short Writings:</h2>
+<pre>
+{{ site.short | inspect }}
+</pre>
+ -->
