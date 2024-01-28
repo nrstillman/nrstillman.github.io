@@ -36,12 +36,30 @@
         padding: 20px;
     }
 
+    .post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    }
+
+    .post-meta .date-published {
+        font-style: italic;
+        color: #666; /* Or any color of your choice */
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: #ccc; /* Or any color of your choice */
+        margin-bottom: 20px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
     body {
-        margin-left: 100px;
-        margin-right: 400px;
+        margin-left: 10px;
+        margin-right: 100px;
         background-color: #f6f4f2;
         font-family: 'Inter', sans-serif;
         line-height: 1.4;
@@ -76,6 +94,25 @@
         margin-left: 200px; 
         padding: 20px;
     }
+
+    .post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    }
+
+    .post-meta .date-published {
+        font-style: italic;
+        color: #666; /* Or any color of your choice */
+    }
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-color: #ccc; /* Or any color of your choice */
+        margin-bottom: 20px;
+    }
+
 }
 
 
