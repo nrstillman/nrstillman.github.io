@@ -16,7 +16,7 @@ Snapshots of a thought or the early shoots of an idea, recorded here for posteri
 {% endfor %}
 
 ### Shorter Writings
-A collection of shorter pieces that cover an assortment of topics of interest or my attempts to work through an idea. 
+A collection of shorter pieces that cover a single topic or an attempts to work through an early-stage idea. 
 
 {% for item in site.writings %}
 {% if item.path contains 'short' %}
@@ -27,7 +27,7 @@ A collection of shorter pieces that cover an assortment of topics of interest or
 {% endfor %}
 
 ### Longer Writings
-More extensive work, covering a broader topic. I'll typically write these in series over a longer timespan. 
+More extensive work, covering collections of topics. I'll typically write these in series over a longer timespan. 
 
 {% for item in site.writings %}
   {% if item.path contains 'long' %}
