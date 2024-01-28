@@ -58,8 +58,8 @@
 
 @media screen and (max-width: 768px) {
     body {
-        margin-left: 10px;
-        margin-right: 100px;
+        margin-left: 15px;
+        margin-right: 50px;
         background-color: #f6f4f2;
         font-family: 'Inter', sans-serif;
         line-height: 1.4;
