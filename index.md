@@ -5,7 +5,7 @@ title: Home
 
 # Namid R. Stillman
 
-My personal homepage, including early writings on topics of interest or to better understand a series of connected concepts. This is under constant development, and should not be treated as reference material. Note that all writings are my own work and are not constructed using artificial generative models.
+My personal homepage, including writings on topics of interest. This is under constant development, and should not be treated as reference material. Note that all writings are my own work and are not constructed using generative models (except my internal one).
 
 ## General
 
