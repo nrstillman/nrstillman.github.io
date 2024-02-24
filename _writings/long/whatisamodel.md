@@ -1,7 +1,7 @@
 ---
 title: "What is a model?"
-date_published: 24th of February, 2024
 description: "An overview of different types of models and their relation to our understanding of the world. The first in a series of writings to try to better understanding the role of models and representations in our understanding."
+date_published: 24th of February, 2024
 layout: post
 ---
 

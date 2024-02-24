@@ -20,9 +20,7 @@ A collection of shorter pieces that cover a single topic or an early-stage idea.
 
 {% for item in site.writings %}
 {% if item.path contains 'short' %}
-  - [{{ item.title }}]({{ item.url | relative_url }})
-    - {{ item.date_published | default: "(I forgot to add a date)" }}
-    - {{ item.description | default: "(I'm yet to write a description — click through to find out)" }}
+  - [{{ item.title }}]({{ item.url | relative_url }}) - {{ item.description | default: "(I'm yet to write a description — click through to find out)" }}
 {% endif %}
 {% endfor %}
 
@@ -30,7 +28,7 @@ A collection of shorter pieces that cover a single topic or an early-stage idea.
 More extensive work, covering collections of topics. I'll typically write these in series over a longer timespan. 
 
 {% for item in site.writings %}
-  {% if item.path contains 'long' %}
-    - [{{ item.title }}]({{ item.url | relative_url }}) - {{ item.description | default: "(I'm yet to write a description — click through to find out)" }}
-  {% endif %}
+{% if item.path contains 'long' %}
+  - [{{ item.title }}]({{ item.url | relative_url }}) - {{ item.description | default: "(I'm yet to write a description — click through to find out)" }}
+{% endif %}
 {% endfor %}
