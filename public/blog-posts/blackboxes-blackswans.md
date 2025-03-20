@@ -1,7 +1,11 @@
 ---
-title: "When a Black Box meets a Black Swan"
+title: Black Box & Black Swans
+date: 2024-01-28
+readTime: 8 min read
 description: "A brief discussion on the risk of deep generative models (which are understoodas 'black boxes') failing in the same way when responding to rare events (known as 'black 'swan events')"
-date_published: 28th of January, 2024
+tags:
+  - Finance
+  - AI
 layout: post
 ---
 
