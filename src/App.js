@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import AboutPage from './pages/AboutPage';
 import ResearchPage from './pages/ResearchPage';
 import PublicationsPage from './pages/PublicationsPage';
@@ -8,7 +8,7 @@ import BlogPostPage from './pages/BlogPostPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route path="/" element={<AboutPage />} />
@@ -19,7 +19,7 @@ function App() {
           <Route path="/blog/:postId" element={<BlogPostPage />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
