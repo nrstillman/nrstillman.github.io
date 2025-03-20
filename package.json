@@ -1,6 +1,7 @@
 {
-  "name": "portfolio-new",
-  "version": "0.1.0",
+  "name": "nrstillman",
+  "version": "1.0.0",
+  "homepage": "https://nrstillman.github.io/nrstillman.github.io",
   "private": true,
   "dependencies": {
     "@citation-js/core": "^0.7.18",
