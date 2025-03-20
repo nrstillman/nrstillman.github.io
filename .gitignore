@@ -1,0 +1,8 @@
+node_modules
+old-site
+
+obsd/
+.jekyll*
+legacy/
+_site/
+.DS_Store

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nrstillman.github.io/static/css/main.aba3e6ab.css",
+    "main.js": "/nrstillman.github.io/static/js/main.6c41ce1f.js",
+    "static/js/453.b584e5cf.chunk.js": "/nrstillman.github.io/static/js/453.b584e5cf.chunk.js",
+    "index.html": "/nrstillman.github.io/index.html",
+    "main.aba3e6ab.css.map": "/nrstillman.github.io/static/css/main.aba3e6ab.css.map",
+    "main.6c41ce1f.js.map": "/nrstillman.github.io/static/js/main.6c41ce1f.js.map",
+    "453.b584e5cf.chunk.js.map": "/nrstillman.github.io/static/js/453.b584e5cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aba3e6ab.css",
+    "static/js/main.6c41ce1f.js"
+  ]
+}
