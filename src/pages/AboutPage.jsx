@@ -23,16 +23,16 @@ const AboutPage = () => {
           <div className={`transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/*<h1 className="text-4xl lg:text-5xl font-bold mb-8 text-left">Transform your digital presence.</h1>*/}            
             <p className="text-lg mb-6 leading-relaxed text-left">
-              I am interested in developing interpretable AI methods for scientific research, with a specific focus on 
+              I am interested in developing interpretable AI methods for scientific research, with a specific focus on
               <span 
                 className={`font-bold mx-1 border-b ${darkMode ? 'border-white' : 'border-gray-800'} cursor-pointer`}
                 onMouseEnter={() => setHoverImage('simulation-methods')}
                 onMouseLeave={() => setHoverImage('default')}
               >
-                simulation-based methods.
+              simulation-based methods.
               </span> 
-              I am especially interested in
-              <span 
+              I am especially interested in simulation-based inference, geometric learning, and deep generative and hybrid models.
+{/*              <span 
                 className={`font-bold mx-1 border-b ${darkMode ? 'border-white' : 'border-gray-800'} cursor-pointer`}
                 onMouseEnter={() => setHoverImage('sbi')}
                 onMouseLeave={() => setHoverImage('default')}
@@ -52,15 +52,16 @@ const AboutPage = () => {
                 onMouseEnter={() => setHoverImage('hybrid-models')}
                 onMouseLeave={() => setHoverImage('default')}
               >
-                deep generative or hybrid models.
-              </span>
+                            deep generative or hybrid models.
+                            </span>
+*/}        
               I have worked on research problems in many different fields, ranging from nanotechnology through to finance but my long-term aim is to combine deep learning with traditional mathematical models of complex and collective systems to discover new rules for 
               <span 
                 className={`font-bold mx-1 border-b ${darkMode ? 'border-white' : 'border-gray-800'} cursor-pointer`}
                 onMouseEnter={() => setHoverImage('living-systems')}
                 onMouseLeave={() => setHoverImage('default')}
               >
-                living and non-equilibrium systems 
+                living and complex systems 
               </span> and integrating these rules into 
               <span 
                 className={`font-bold mx-1 border-b ${darkMode ? 'border-white' : 'border-gray-800'} cursor-pointer`}
@@ -107,8 +108,7 @@ const AboutPage = () => {
                 <div className="text-center p-6">
                   <h3 className="text-2xl font-bold mb-4">Simulation-methods</h3>
                   <p className="text-base max-w-xs mx-auto">
-                    Exploring the frontiers of AI and human interaction through rigorous methods 
-                    and innovative approaches.
+                    Building interpretable mathematical and computational models of physical and complex systems to test hypotheses and causal mechanisms.
                   </p>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const AboutPage = () => {
                 <div className="text-center p-6">
                   <h3 className="text-2xl font-bold mb-4">Living Systems</h3>
                   <p className="text-base max-w-xs mx-auto">
-                    Designing intuitive ways for humans to interact with complex systems.
+                    Systems of many interacting components such as cells, active particles, and agents. These systems are typically far from equilibria, stochastic, high dimensional, and have interesting emergent properties.
                   </p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const AboutPage = () => {
                 <div className="text-center p-6">
                   <h3 className="text-2xl font-bold mb-4">Active Learning & Experiment Design</h3>
                   <p className="text-base max-w-xs mx-auto">
-                    Designing intuitive ways for humans to interact with complex systems.
+                    Search through high-dimensional problem space through the introduction of emulation and simulation-based surrogate search methods or curriculum learning for faster optimisation convergence. 
                   </p>
                 </div>
               </div>
