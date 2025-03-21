@@ -83,13 +83,15 @@ const AboutPage = () => {
                         <p className="text-lg mb-6 leading-relaxed text-left">
               This site is under constant development and personal writings should not be treated as reference material. Note that all writings are my own work and are not constructed using generative models (except my internal one). This website is best viewed on a large screen. 
             </p>
-            <div className="text-left">
-              <button className={`mt-8 px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 ${
-                darkMode ? 'bg-white text-gray-900' : 'bg-gray-800 text-white'
-              }`}>
-                Get in touch
-              </button>
-            </div>
+              <div className="text-left">
+                <a href="https://www.linkedin.com/in/namidstillman" target="_blank" rel="noopener noreferrer">
+                  <button className={`mt-8 px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+                    darkMode ? 'bg-white text-gray-900' : 'bg-gray-800 text-white'
+                  }`}>
+                    Get in touch
+                  </button>
+                </a>
+              </div>
                         
             <Footer className="mt-16" />
           </div>
