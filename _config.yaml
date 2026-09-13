@@ -1,0 +1,21 @@
+title: Namid R. Stillman
+email: nrstillman@website.com
+linkedin: https://uk.linkedin.com/in/namidstillman
+twitter: https://x.com/nrstillman
+description: >-
+  Research and writing on interpretable AI, scientific simulation, and complex systems.
+baseurl: ""
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  
+collections:
+  writings:
+    output: false
+    permalink: /writings/:path/

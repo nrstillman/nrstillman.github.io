@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/publications' | relative_url }}">Publications</a>
+    </div>
+    <div class="container">
+        {{ content }}
+    </div>
+</body>
+</html>
