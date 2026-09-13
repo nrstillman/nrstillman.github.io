@@ -4,6 +4,7 @@ description: "On the different models we use to understand the world and what th
 date_published: 2024-02-24
 layout: post
 permalink: /blog/what-is-a-model/
+published: false
 ---
 
 A model has become a catch all term for many different aspects of understanding. There are mental models, toy models, computer models, animal models, and world models. A term so widely used might be expected to lose some meaning but the breadth in application of this simple word also matches the complexities of life that models seek to distill. One reason that the "idea of a model" takes on many different meanings is due to the multitude of things that we attempt to model. Models reflect our attempt to capture understanding in the world. 
